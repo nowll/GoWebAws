@@ -1,9 +1,7 @@
-name : Deploy Go Web App 
+name : Deploy Go Web 
 
-on: 
-  push:
-    branches:
-    - deploy
+on:
+    workflow_dispatch
 
 jobs:
   build: 
