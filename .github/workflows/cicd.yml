@@ -22,7 +22,7 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Pull docker image
-      run: docker pull noelll/go-web-abb/:latest
+      run: docker pull noelll/go-web-abb:latest
     - name: Delete old container
       run: docker delete rm -rf go-app-container
     - name: Run docker container
