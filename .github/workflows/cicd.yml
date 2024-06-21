@@ -3,7 +3,7 @@ name : Deploy Go Web App
 on: 
   push:
     branches:
-    - deploy-to-ec2
+    - deploy
 
 jobs:
   build: 
