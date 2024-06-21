@@ -24,6 +24,6 @@ jobs:
     - name: Pull docker image
       run: docker pull noelll/go-web-abb:latest
     - name: Delete old container
-      run: docker delete rm -f go-app-container
+      run: docker rm -f go-app-container
     - name: Run docker container
       run: docker run -d -p 4040:4040 --name go-app-container noelll/go-web-abb
