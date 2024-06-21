@@ -16,7 +16,7 @@ jobs:
       - name: Build docker image
         run: docker build -t noelll/go-web-abb .
       - name: Push  image to docker hub
-        run: docker push noelll/go-web-abb/:latest
+        run: docker push noelll/go-web-abb:latest
   deploy:
     needs: build
     runs-on: self-hosted
