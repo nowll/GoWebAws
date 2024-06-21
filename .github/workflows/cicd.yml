@@ -14,15 +14,15 @@ jobs:
       - name: Login to docker
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build docker image
-        run: docker build -t /noelll/go-web-abb .
+        run: docker build -t noelll/go-web-abb .
       - name: Push  image to docker hub
-        run: docker push /noelll/go-web-abb/:latest
+        run: docker push noelll/go-web-abb/:latest
   deploy:
     needs: build
     runs-on: self-hosted
     steps:
     - name: Pull docker image
-      run: docker pull /noelll/go-web-abb/:latest
+      run: docker pull noelll/go-web-abb/:latest
     - name: Delete old container
       run: docker delete rm -rf go-app-container
     - name: Run docker container
